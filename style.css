@@ -13,10 +13,25 @@ html {
 
 body {
     height: 90%; /*Of html, html full-screen size*/
-    aspect-ratio: 1/1; /*Square body, so each pixel is square too*/
+    aspect-ratio: 1.75/1;
     margin: 0 auto;
     border: green solid 3px;
+    display: flex;
+    justify-content: start;
 }
+
+
+body .sidebar {
+    border: green solid 2px;
+}
+
+
+body .drawing-window {
+    border: green solid 2px;
+    width: 60%;
+    height: 100%;
+}
+
 
 
 h1 {
@@ -39,7 +54,7 @@ h1 {
     flex-direction: column;
     box-sizing: border-box;
     height: 90%; /*Leave some space for h1*/
-    width: 90%;
+    width: calc(0.9*90vh); /*Allow square pixel*/
     margin: 0 auto;
     border: purple solid 3px;
 }
