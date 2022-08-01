@@ -1,5 +1,5 @@
-.body,
-.html {
+html,
+body {
     padding: 0;
     margin: 0;
 }
@@ -13,18 +13,29 @@ html {
 
 body {
     width: 100%;
+    height: 100%;
 }
 
 
 .container {
     display: flex;
+    width: 100%;
 }
 
 
-.big {
+.container.big {
     flex-direction: column;
+    height: 90%; /*Leave some space for h1*/
 }
 
-.item {
-   /* border: solid black 3px;*/
+
+.container.row {
+    height:calc((100%/16));
+    flex: 1 1 0;
+}
+
+
+.container.row .item {
+    border: solid red 1px;
+    flex: 1 1 0;
 }
