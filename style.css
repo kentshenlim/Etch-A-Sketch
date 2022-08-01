@@ -17,6 +17,17 @@ body {
 }
 
 
+h1 {
+    border: solid blue 1px;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0;
+    height: 10%; /*90% for .container.big*/
+    line-height: 250%; /*Vertical position of text*/
+   
+}
+
+
 .container {
     display: flex;
     width: 100%;
