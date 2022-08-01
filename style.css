@@ -12,9 +12,10 @@ html {
 
 
 body {
-    height: 90%;
+    height: 90%; /*Of html, html full-screen size*/
     aspect-ratio: 1/1; /*Square body, so each pixel is square too*/
     margin: 0 auto;
+    border: green solid 3px;
 }
 
 
@@ -24,7 +25,8 @@ h1 {
     text-align: center;
     margin: 0;
     height: 10%; /*90% for .container.big*/
-    line-height: 250%; /*Vertical position of text*/
+    min-height: fit-content;
+    /*line-height: 250%; /*Vertical position of text*/
    
 }
 
@@ -37,7 +39,11 @@ h1 {
 
 .container.big {
     flex-direction: column;
+    box-sizing: border-box;
     height: 90%; /*Leave some space for h1*/
+    width: 90%;
+    margin: 0 auto;
+    border: purple solid 3px;
 }
 
 
