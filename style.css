@@ -65,6 +65,12 @@ body .drawing-window {
 
 .sidebar input.number-pixel {
     width: 50%;
+    cursor: text;
+}
+
+
+.sidebar button.number-pixel {
+    cursor: pointer;
 }
 
 
@@ -100,6 +106,7 @@ body .drawing-window {
 .sidebar img {
     max-width: 80%;
     max-width: 80%;
+    cursor: pointer;
 }
 
 
