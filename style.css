@@ -60,17 +60,22 @@ body .drawing-window {
 .sidebar .number-pixel {
     display: block;
     margin: 5% auto;
+    font-size: 2vmin;
 }
 
 
 .sidebar input.number-pixel {
-    width: 50%;
     cursor: text;
+    width: 50%;
+    height: 15%;
 }
 
 
 .sidebar button.number-pixel {
     cursor: pointer;
+    box-sizing: border-box;
+    width: 80%;
+    height: 20%;
 }
 
 
