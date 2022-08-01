@@ -12,8 +12,9 @@ html {
 
 
 body {
-    width: 100%;
-    height: 100%;
+    height: 90%;
+    aspect-ratio: 1/1; /*Square body, so each pixel is square too*/
+    margin: 0 auto;
 }
 
 
