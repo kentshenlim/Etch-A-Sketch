@@ -97,6 +97,12 @@ body .drawing-window {
 }
 
 
+.sidebar img {
+    max-width: 80%;
+    max-width: 80%;
+}
+
+
 /*Drawing window feature*/
 h1 {
     border: solid blue 1px;
