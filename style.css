@@ -25,9 +25,7 @@ h1 {
     text-align: center;
     margin: 0;
     height: 10%; /*90% for .container.big*/
-    font-size: 7vmin;
-    /*line-height: 250%; /*Vertical position of text*/
-   
+    font-size: 7vmin; /*Font scales with window*/   
 }
 
 
@@ -56,4 +54,10 @@ h1 {
 .container.row .item {
     border: solid red 1px;
     flex: 1 1 0;
+}
+
+
+.container.row .item:hover {
+    background-color: rgba(44, 38, 41, 0.35);
+    cursor: grab;
 }
