@@ -37,6 +37,13 @@ changePixelBtn.addEventListener('click', () => {
 
 
 // Changing color
+const colorChoices = document.querySelectorAll(".sidebar .color div");
+colorChoices.forEach(colorChoice => {
+    colorChoice.addEventListener('click', () => {
+        const classList = colorChoice.getAttribute('class');
+        activeColor = classList.split(' ')[0]; // Change to first class, the color
+    })
+})
 
 
 // Drawing window interaction
