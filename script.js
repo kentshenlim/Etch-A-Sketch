@@ -1,11 +1,14 @@
 let mouseDownOrNot = false
 , activeColor = 'black';
+const changePixelBtn = document.querySelector(".sidebar .pixel button")
+, colorChoices = document.querySelectorAll(".sidebar .color div")
+, eraserBtn = document.querySelector(".sidebar .erase img")
+, clearBtn = document.querySelector(".sidebar .clear img");
 allowDrawing();
 
 
 // Sidebar interaction
 // Changing pixels
-const changePixelBtn = document.querySelector(".sidebar .pixel button");
 changePixelBtn.addEventListener('click', () => {
     const input = document.querySelector(".sidebar .pixel input")
     , num = input.value;
@@ -30,14 +33,13 @@ changePixelBtn.addEventListener('click', () => {
         }
         drawingWin.appendChild(newDrawingPixels);
     }
-    allowDrawing(); // Must readd drawing functionality because elements recreated
+    allowDrawing(); // Must read drawing functionality because elements recreated
     input.value = '';
     input.focus();
 })
 
 
 // Changing color
-const colorChoices = document.querySelectorAll(".sidebar .color div");
 colorChoices.forEach(colorChoice => {
     colorChoice.addEventListener('click', () => {
         const classList = colorChoice.getAttribute('class');
@@ -47,14 +49,12 @@ colorChoices.forEach(colorChoice => {
 
 
 // Eraser
-const eraserBtn = document.querySelector(".sidebar .erase img");
 eraserBtn.addEventListener('click', () => {
     activeColor = 'white';
 })
 
 
 // Clear
-const clearBtn = document.querySelector(".sidebar .clear img");
 clearBtn.addEventListener('click', () => {
     const pixelArray = document.querySelectorAll(".item");
     pixelArray.forEach(pixel => {
