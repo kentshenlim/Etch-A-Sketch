@@ -29,6 +29,7 @@ changePixelBtn.addEventListener('click', () => {
         }
         drawingWin.appendChild(newDrawingPixels);
     }
+    allowDrawing(); // Must readd drawing functionality because elements recreated
     input.value = '';
     input.focus();
 })
