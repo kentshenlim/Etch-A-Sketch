@@ -1,4 +1,5 @@
-let mouseDownOrNot = false;
+let mouseDownOrNot = false
+, activeColor = 'black';
 allowDrawing();
 
 
@@ -35,6 +36,9 @@ changePixelBtn.addEventListener('click', () => {
 })
 
 
+// Changing color
+
+
 // Drawing window interaction
 // There are two events to be listened: mousedown and mouseenter.
 // When mouseenter happen AND when the mouse is held, change the class of pixel.
@@ -59,11 +63,11 @@ function allowDrawing() {
     pixelArray.forEach(pixel => {
         pixel.addEventListener('mouseenter', () => {
             if (mouseDownOrNot) {
-                pixel.classList.add('plotted');
+                pixel.style.backgroundColor = activeColor;
             }
         });
         pixel.addEventListener('click', () => {
-            pixel.classList.add('plotted')
+            pixel.style.backgroundColor = activeColor;
         });
     });
     
