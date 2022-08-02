@@ -53,6 +53,16 @@ eraserBtn.addEventListener('click', () => {
 })
 
 
+// Clear
+const clearBtn = document.querySelector(".sidebar .clear img");
+clearBtn.addEventListener('click', () => {
+    const pixelArray = document.querySelectorAll(".item");
+    pixelArray.forEach(pixel => {
+        pixel.style.backgroundColor = 'white';
+    })
+})
+
+
 // Drawing window interaction
 // There are two events to be listened: mousedown and mouseenter.
 // When mouseenter happen AND when the mouse is held, change the class of pixel.
