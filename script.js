@@ -4,9 +4,11 @@ let mouseDownOrNot = false;
 
 
 // Sidebar interaction
+// Changing pixels
 const changePixelBtn = document.querySelector(".sidebar .pixel button");
 changePixelBtn.addEventListener('click', () => {
-    const num = document.querySelector(".sidebar .pixel input").value;
+    const input = document.querySelector(".sidebar .pixel input");
+    const num = input.value;
     if (num < 1 || num > 100) {
         alert('Number of pixels must be within the range 1 to 100!');
     }
@@ -28,6 +30,8 @@ changePixelBtn.addEventListener('click', () => {
         }
         drawingWin.appendChild(newDrawingPixels);
     }
+    input.value = '';
+    input.focus();
 })
 
 
