@@ -3,6 +3,35 @@ const wholePage = document.querySelector("html");
 let mouseDownOrNot = false;
 
 
+// Sidebar interaction
+const changePixelBtn = document.querySelector(".sidebar .pixel button");
+changePixelBtn.addEventListener('click', () => {
+    const num = document.querySelector(".sidebar .pixel input").value;
+    if (num < 1 || num > 100) {
+        alert('Number of pixels must be within the range 1 to 100!');
+    }
+    else {
+        const drawingWin = document.querySelector(".drawing-window");
+        const drawingPixels = document.querySelector(".drawing-window .big");
+        const newDrawingPixels = document.createElement('div');
+        newDrawingPixels.className = 'container big';
+        drawingWin.removeChild(drawingPixels);
+        for (let i = 1; i <= num ; i++) {
+            const row = document.createElement("div");
+            row.className = 'container row';
+            for (let j = 1; j <= num; j++) {
+                const onePixel = document.createElement("div");
+                onePixel.className = 'item';
+                row.appendChild(onePixel);
+            }
+            newDrawingPixels.appendChild(row);
+        }
+        drawingWin.appendChild(newDrawingPixels);
+    }
+})
+
+
+// Drawing window interaction
 // There are two events to be listened: mousedown and mouseenter.
 // When mouseenter happen AND when the mouse is held, change the class of pixel.
 // One way to do this is to set up a Boolean, which, when mousedown happen, changed to true.
@@ -30,6 +59,8 @@ pixelArray.forEach(pixel => {
     });
 });
 
+
+// Bug fix if keyup outside pixels
 wholePage.addEventListener('mouseup', (e) => {
     mouseDownOrNot = false;
     e.stopPropagation();
