@@ -9,7 +9,7 @@ const changePixelBtn = document.querySelector(".sidebar .pixel button");
 changePixelBtn.addEventListener('click', () => {
     const input = document.querySelector(".sidebar .pixel input")
     , num = input.value;
-    if (num < 1 || num > 100) {
+    if (num < 1 || num > 100 || isNaN(num)) {
         alert('Number of pixels must be within the range 1 to 100!');
     }
     else {
