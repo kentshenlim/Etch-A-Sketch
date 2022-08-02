@@ -15,15 +15,16 @@ body {
     height: 90%; /*Of html, html full-screen size*/
     aspect-ratio: 1.75/1;
     margin: 0 auto;
-    border: green solid 3px;
     display: flex;
     justify-content: center;
     position: relative;
+    background: #eeaeca;
+    background: radial-gradient(circle, #eeaeca 0%, #94bbe9 100%);
 }
 
 
 body .sidebar {
-    border: green solid 2px;
+    border: #363129a1 solid 2px;
     position: absolute;
     top:0%;
     left: 10%; /*.sidebar to end while .drawing-window at center*/
@@ -37,9 +38,11 @@ body .sidebar {
 
 
 body .drawing-window {
-    border: green solid 2px;
+    border: #363129a1 solid 4px;
     width: 60%;
     height: 100%;
+    background: #eeaeca;
+    background: radial-gradient(circle, #eeaeca 0%, #94bbe9 100%);
 }
 
 
@@ -50,7 +53,7 @@ body .drawing-window {
 .sidebar .clear {
     width: 100%;
     height: 25%;
-    border: solid black 3px;
+    border: solid #363129a1 3px;
     text-align: center;
     box-sizing: border-box;
     padding-top: 50%;
@@ -117,12 +120,14 @@ body .drawing-window {
 
 /*Drawing window feature*/
 h1 {
-    border: solid blue 1px;
     box-sizing: border-box;
     text-align: center;
     margin: 0;
     height: 10%; /*90% for .container.big*/
-    font-size: 7vmin; /*Font scales with window*/   
+    font-size: 7vmin; /*Font scales with window*/  
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, 
+    rgba(148,187,233,1) 100%);
 }
 
 
@@ -138,7 +143,7 @@ h1 {
     height: 90%; /*Leave some space for h1*/
     width: calc(0.9*90vh); /*Allow square pixel*/
     margin: 0 auto;
-    border: purple solid 3px;
+    border: #363129a1 solid 3px;
 }
 
 
@@ -149,13 +154,14 @@ h1 {
 
 
 .container.row .item {
-    border: solid red 1px;
+    border: solid #45454542 1px;
     flex: 1 1 0;
+    background-color: #ffffff;
 }
 
 
 .container.row .item:hover {
-    background-color: rgba(44, 38, 41, 0.35);
-    border: solid 1px rgba(44, 38, 41, 0.7);
+    background-color: #f0f2f5;
+    border: solid 1px #2c2629b3;
     cursor: grab;
 }
